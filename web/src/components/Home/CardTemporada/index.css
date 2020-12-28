@@ -1,0 +1,8 @@
+.card > img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+#img-1:hover {
+  width: 50vw;
+}
