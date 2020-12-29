@@ -6,18 +6,28 @@ import temporada2 from '../../images/temporada_2.jpg';
 import temporada3 from '../../images/temporada_3.jpg';
 import temporada4 from '../../images/temporada_4.jpg';
 
+import vanessa from '../../images/vanessa.jpg';
+import axel from '../../images/axel.jpg';
+import dmitri from '../../images/dmitri.jpg';
+import julius from '../../images/julius.jpg';
+import doc from '../../images/doc.jpg';
+import rebecca from '../../images/rebecca.jpg';
+
 import './index.css';
 import CardTemporada from '../../components/Home/CardTemporada';
+import CardPersonagem from '../../components/Home/CardPersonagem';
 
 AOS.init()
 class Home extends Component {
 
     addHover = (id) => {
-        console.log("add_", id);
+        let el = document.getElementById(id);
+        el.classList.add("card-info-hover");
     }
 
     removeHover = (id) => {
-        console.log("remove_", id);
+        let el = document.getElementById(id);
+        el.classList.remove("card-info-hover");
     }
 
     render() {
@@ -102,7 +112,22 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid box bg-black"></div>
+                <div className="container-fluid box bg-black">
+                    <div className="row">
+                        <div className="col-md-12 text-center text-white pt-4">
+                            <h3>Personagens</h3>
+                        </div>
+                    </div>
+
+                    <div className="row mt-4 pt-4">
+                        <CardPersonagem fade="fade-down" nome="Vanessa" img={vanessa} />
+                        <CardPersonagem fade="fade-down" nome="Axel" img={axel} />
+                        <CardPersonagem fade="fade-down" nome="Doc" img={doc} />
+                        <CardPersonagem fade="fade-down" nome="Dmitri" img={dmitri} />
+                        <CardPersonagem fade="fade-down" nome="Rebecca" img={rebecca} />
+                        <CardPersonagem fade="fade-down" nome="Julius" img={julius} />
+                    </div>
+                </div>
             </div>
         )
     }

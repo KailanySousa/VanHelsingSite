@@ -1,0 +1,40 @@
+.img-personagem > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 120px;
+  object-fit: contain;
+}
+
+.img-personagem {
+  display: flex;
+  justify-content: center;
+}
+
+.img-personagem p {
+  padding: 0px;
+  margin: 0px;
+  font-size: 24px;
+}
+
+.nome-personagem {
+  opacity: 0;
+  top: 40%;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+}
+
+.img-personagem:hover {
+  cursor: pointer;
+}
+
+.img-personagem:hover > img {
+  opacity: 0.5;
+  cursor: pointer;
+  box-shadow: -1px -1px 26px 5px rgba(255, 255, 255, 75);
+}
+
+.img-personagem:hover > .nome-personagem {
+  opacity: 1;
+  cursor: pointer;
+}

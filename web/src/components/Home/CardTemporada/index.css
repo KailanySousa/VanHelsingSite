@@ -3,6 +3,33 @@
   object-fit: cover;
 }
 
-#img-1:hover {
-  width: 50vw;
+.card-info {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.card-info div {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  padding-top: 6px;
+  font-weight: bold;
+}
+
+#card-name {
+  border-radius: 0px 0px 10px 10px;
+  top: 0px;
+}
+
+#card-info {
+  border-radius: 10px 10px 0px 0px;
+  bottom: 0px;
+}
+
+.card-info-hover {
+  transition: 1s;
+  opacity: 1;
+  visibility: visible;
 }
